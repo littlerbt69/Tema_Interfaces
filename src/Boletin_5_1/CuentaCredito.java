@@ -50,6 +50,7 @@ public class CuentaCredito extends Cuenta {
         } else {
             dineroRetirar -= getSaldo();
             super.sacarDinero(getSaldo());
+            this.credito -= dineroRetirar;
         }
     }
 }
