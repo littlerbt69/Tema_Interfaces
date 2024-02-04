@@ -22,7 +22,6 @@ public class Clerigo extends Personaje implements IRezable {
 
     @Override
     public void setFuerza(int fuerza) throws PersonajeException {
-        //Personaje.checkValidStat(f, Personaje.MIN_STATS, MAGO_MAX_FUERZA);
         if (fuerza < Clerigo.CLERIGO_MIN_FUERZA) {
             throw new PersonajeException ("La fuerza mínima del clérigo es " + Clerigo.CLERIGO_MIN_FUERZA);
         }
