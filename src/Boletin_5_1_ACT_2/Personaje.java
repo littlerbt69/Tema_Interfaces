@@ -1,4 +1,4 @@
-package Boletin_5_1;
+package Boletin_5_1_ACT_2;
 
 public class Personaje {
 
@@ -50,7 +50,7 @@ public class Personaje {
         return inteligencia;
     }
 
-    public void setInteligencia(int inteligencia) throws PersonajeException{
+    public void setInteligencia(int inteligencia) throws PersonajeException {
         if (inteligencia < MIN_INTELIGENCIA || inteligencia > MAX_INTELIGENCIA) {
             throw new PersonajeException("Los valores de inteligencia deben estar comprendidos entre 0-20");
         }
@@ -75,16 +75,18 @@ public class Personaje {
     }
 
     public void setVidaActual(int vidaActual) throws PersonajeException {
-        if (vidaActual < MIN_VIDA || vidaActual > vidaMax) {
-            throw new PersonajeException("Los valores de vida actual deben estar comprendidos entre 0-Maximo");
+        if (vidaActual < MIN_VIDA) {
+            this.vidaActual = MIN_VIDA;
+        } else if (vidaActual > vidaMax) {
+            this.vidaActual = vidaMax;
+        } else {
+            this.vidaActual = vidaActual;
         }
-
-        this.vidaActual = vidaActual;
     }
 
     @Override
-    public String   toString() {
-        return "Personaje{" +
+    public String toString() {
+        return " Personaje{" +
                 "nombre='" + nombre + '\'' +
                 ", raza=" + raza +
                 ", fuerza=" + fuerza +

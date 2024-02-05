@@ -1,4 +1,4 @@
-package Boletin_5_1;
+package Boletin_5_1_ACT_1;
 
 public class CuentaCreditoException extends Exception{
     public CuentaCreditoException() {

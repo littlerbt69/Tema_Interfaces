@@ -1,4 +1,6 @@
-package Boletin_5_1;
+package Boletin_5_1_ACT_6;
+
+import java.util.Arrays;
 
 public class Mago extends Personaje {
 
@@ -9,7 +11,7 @@ public class Mago extends Personaje {
 
     private String[] hechizos;
 
-    public Mago(String nombre, TRaza raza, int fuerza, int inteligencia, int vidaMax, String[] hechizos) throws PersonajeException {
+    public Mago(String nombre, TRaza raza, int fuerza, int inteligencia, int vidaMax) throws PersonajeException {
         super(nombre, raza, fuerza, inteligencia, vidaMax);
         hechizos = new String[MAX_HECHIZOS];
     }
@@ -73,9 +75,23 @@ public class Mago extends Personaje {
                 throw new PersonajeException("No puedes lanzar un hechizo a tu mismo personaje");
             }
 
-            if (personaje.getVidaActual() == 0) {
+            if (personaje.getVidaActual() == MIN_VIDA) {
                 throw new PersonajeException("El personaje al que quieres atacar esta muerto");
             }
+
+            personaje.setVidaActual(personaje.getVidaActual() - DAÑO_HECHIZO);
+
+            hechizos[posicionHechizo] = null;
+
         }
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Mago{");
+        sb.append("hechizos=").append(Arrays.toString(hechizos));
+        sb.append(super.toString());
+        sb.append('}');
+        return sb.toString();
     }
 }

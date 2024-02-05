@@ -1,4 +1,7 @@
-package Boletin_5_1;
+package Boletin_5_1_ACT_1;
+
+import Boletin_5_1_ACT_1.CuentaCreditoException;
+import Boletin_5_1_ACT_1.CuentaException;
 
 public class Cuenta {
     public static final double SALDO_DEFAULT = 0;

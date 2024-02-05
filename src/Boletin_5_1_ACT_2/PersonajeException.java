@@ -1,4 +1,4 @@
-package Boletin_5_1;
+package Boletin_5_1_ACT_2;
 
 public class PersonajeException extends Exception{
 

@@ -1,11 +1,11 @@
-package Boletin_5_1;
+package Boletin_5_1_ACT_1;
 
 public class CuentaCredito extends Cuenta {
     public static final double CREDITO_DEFAULT = 100;
     public static final double CREDITO_MAXIMO = 300;
     private double credito;
 
-    public CuentaCredito(double saldo, double credito) throws CuentaCreditoException{
+    public CuentaCredito(double saldo, double credito) throws CuentaCreditoException {
         super(saldo);
         setCredito(credito);
     }
