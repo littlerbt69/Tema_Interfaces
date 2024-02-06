@@ -4,7 +4,6 @@ public class MOBAGamer implements IGamer{
 
     @Override
     public void playGame() {
-        System.out.println("Playing a Multiplayer Online\n" +
-                "Battle Arena Game");
+        System.out.println("Playing a Multiplayer Online Battle Arena Game");
     }
 }
