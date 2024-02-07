@@ -6,13 +6,13 @@ import java.time.LocalDateTime;
 public class Ficheros {
     private String nombre;
     private long tamaño;
-    private LocalDateTime fechaCreacion;
+    private LocalDate fechaCreacion;
 
     //Constructor
-    public Ficheros(String nombre, long tamaño) {
+    public Ficheros(String nombre, long tamaño, LocalDate fechaCreacion) {
         this.nombre = nombre;
         setTamaño(tamaño);
-        this.fechaCreacion = LocalDateTime.now();
+        this.setFechaCreacion(fechaCreacion);
     }
 
     public String getNombre() {
@@ -40,12 +40,12 @@ public class Ficheros {
         this.tamaño = tamaño;
     }
 
-    public LocalDateTime getFechaCreacion() {
+    public LocalDate getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(LocalDateTime fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
+    private void setFechaCreacion(LocalDate fecha_creacion) {
+        this.fechaCreacion = fecha_creacion;
     }
 
     public void mostrarDatos() throws FicheroException {
