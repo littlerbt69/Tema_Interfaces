@@ -1,6 +1,7 @@
 package Examen_2022;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Ficheros {
     private String nombre;

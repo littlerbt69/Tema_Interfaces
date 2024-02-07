@@ -5,12 +5,6 @@ public class MusicApp {
         for (int i = 0; i < players.length; i++) {
             IMusicPlayer player = players[i];
 
-            if (player instanceof IOnlineMusicPlayer) {
-                ((IOnlineMusicPlayer) player).stream();
-            } else if (player instanceof IOfflineMusicPlayer) {
-                ((IOfflineMusicPlayer) player).load();
-            }
-
             player.play();
             player.stop();
         }

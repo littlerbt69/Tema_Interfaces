@@ -1,9 +1,11 @@
 package Boletin_5_2_ACT_2;
 
 public class Rectangulo extends Forma implements IDibujable{
+    private double lado1 = 20, lado2 = 10;
+
     @Override
     public double calcularArea() {
-        return 20 * 10;
+        return lado1 * lado2;
     }
 
     @Override

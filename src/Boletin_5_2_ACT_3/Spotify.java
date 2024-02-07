@@ -3,6 +3,7 @@ package Boletin_5_2_ACT_3;
 public class Spotify implements IOnlineMusicPlayer, IOfflineMusicPlayer{
     @Override
     public void play() {
+        stream();
         System.out.println("Reproduciendo musica en Spotify");
     }
 

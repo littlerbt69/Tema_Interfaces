@@ -3,6 +3,7 @@ package Boletin_5_2_ACT_3;
 public class Itunes implements IOnlineMusicPlayer, IOfflineMusicPlayer{
     @Override
     public void play() {
+        load();
         System.out.println("Reproduciendo musica en Itunes");
     }
 
