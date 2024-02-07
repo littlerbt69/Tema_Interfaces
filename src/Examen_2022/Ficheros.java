@@ -6,13 +6,13 @@ import java.time.LocalDateTime;
 public class Ficheros {
     private String nombre;
     private long tamaño;
-    private LocalDate fechaCreacion;
+    private LocalDateTime fechaCreacion;
 
     //Constructor
-    public Ficheros(String nombre, long tamaño, LocalDate fechaCreacion) {
+    public Ficheros(String nombre, long tamaño) {
         this.nombre = nombre;
-        this.tamaño = tamaño;
-        this.fechaCreacion = fechaCreacion;
+        setTamaño(tamaño);
+        this.fechaCreacion = LocalDateTime.now();
     }
 
     public String getNombre() {
@@ -27,15 +27,24 @@ public class Ficheros {
         return tamaño;
     }
 
-    public void setTamaño(long tamaño) {
+    /**
+     *
+     * @param tamaño
+     * @throws IllegalArgumentException
+     */
+    private void setTamaño(long tamaño) {
+        if (tamaño < 0) {
+            throw new IllegalArgumentException("El fichero no puede tener un tamaño negativo");
+        }
+
         this.tamaño = tamaño;
     }
 
-    public LocalDate getFechaCreacion() {
+    public LocalDateTime getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(LocalDate fechaCreacion) {
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 
