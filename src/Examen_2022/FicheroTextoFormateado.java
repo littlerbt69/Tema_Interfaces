@@ -26,7 +26,10 @@ public class FicheroTextoFormateado extends FicheroTexto implements IAnalizable{
         return tamañoFuente;
     }
 
-    public void setTamañoFuente(int tamañoFuente) {
+    public void setTamañoFuente(int tamañoFuente) throws FicheroException {
+        if (tamañoFuente < 0) {
+            throw new FicheroException("El tamaño de la fuente no puede ser menor a 0");
+        }
         this.tamañoFuente = tamañoFuente;
     }
 

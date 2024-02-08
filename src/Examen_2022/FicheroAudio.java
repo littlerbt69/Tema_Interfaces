@@ -14,7 +14,10 @@ public class FicheroAudio extends FicheroBinario implements IReproducible{
         return duracion_segundos;
     }
 
-    public void setDuracion_segundos(int duracion_segundos) {
+    public void setDuracion_segundos(int duracion_segundos) throws FicheroException {
+        if (duracion_segundos < 0) {
+            throw new FicheroException("La duracion de los ficheros de video no puede ser menor a 0");
+        }
         this.duracion_segundos = duracion_segundos;
     }
 
