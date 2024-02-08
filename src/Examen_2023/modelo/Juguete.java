@@ -1,4 +1,4 @@
-package modelo;
+package Examen_2023.modelo;
 
 public abstract class Juguete {
     private String nombre, marca;

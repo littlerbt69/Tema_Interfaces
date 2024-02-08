@@ -1,4 +1,4 @@
-package exceptions;
+package Examen_2023.modelo;
 
 public class JugueteException extends Exception {
 

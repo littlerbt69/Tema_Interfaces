@@ -1,6 +1,4 @@
-package modelo;
-
-import exceptions.JugueteException;
+package Examen_2023.modelo;
 
 public class VehiculoPlastico extends JuguetePlastico {
     private int numRuedas;

@@ -1,9 +1,10 @@
-package main;
+package Examen_2023.main;
 
-import exceptions.JugueteException;
-import interfaces.Apilable;
-import modelo.*;
-import utils.UserDataCollector;
+import Examen_2023.modelo.JugueteException;
+import Examen_2023.interfaces.Apilable;
+import Examen_2023.exceptions.modelo.*;
+import Examen_2023.utils.UserDataCollector;
+import Examen_2023.modelo.*;
 
 public class Principal {
     

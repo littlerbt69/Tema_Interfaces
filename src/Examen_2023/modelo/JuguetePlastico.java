@@ -1,4 +1,4 @@
-package modelo;
+package Examen_2023.modelo;
 
 public abstract class JuguetePlastico extends Juguete {
     private TPlastico tipoPlastico;

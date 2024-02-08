@@ -1,7 +1,6 @@
-package modelo;
+package Examen_2023.modelo;
 
-import exceptions.JugueteException;
-import interfaces.Apilable;
+import Examen_2023.interfaces.Apilable;
 
 public class PiezaLego extends JuguetePlastico implements Apilable {
     private int longitud;

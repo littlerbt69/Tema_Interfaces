@@ -1,7 +1,6 @@
-package modelo;
+package Examen_2023.modelo;
 
-import exceptions.JugueteException;
-import interfaces.Apilable;
+import Examen_2023.interfaces.Apilable;
 
 public class FiguraMadera extends JugueteMadera implements Apilable {
     private String color;

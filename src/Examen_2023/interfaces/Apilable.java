@@ -1,11 +1,10 @@
-package interfaces;
+package Examen_2023.interfaces;
 
-import exceptions.JugueteException;
-import modelo.Juguete;
+import Examen_2023.modelo.JugueteException;
+import Examen_2023.modelo.Juguete;
 
 public interface Apilable {
-    //public void apilar(Juguete a);
-    
+
     public default void apilar(Juguete a) throws JugueteException {
         if (this == a) {
             throw new JugueteException("No puedes apilar un juguete consigo mismo");
